@@ -1,6 +1,5 @@
 package effectivejava.chapter2.item2.builder;
 
-import common.util.JacksonUtils;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +22,6 @@ public class NutritionFactsTest {
         builder.fat(5);
         builder.sodium(6);
         NutritionFacts nutritionFacts = builder.build();
-        System.out.println(JacksonUtils.objectToJson(nutritionFacts));
     }
 
 }
