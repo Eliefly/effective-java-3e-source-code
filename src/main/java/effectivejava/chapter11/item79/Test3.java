@@ -12,6 +12,7 @@ public class Test3 {
 
 // Observer that uses a background thread needlessly
         set.addObserver(new SetObserver<>() {
+            @Override
             public void added(ObservableSet<Integer> s, Integer e) {
                 System.out.println(e);
                 if (e == 23) {
@@ -28,7 +29,8 @@ public class Test3 {
             }
         });
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 100; i++) {
             set.add(i);
+        }
     }
 }

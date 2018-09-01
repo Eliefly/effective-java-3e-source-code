@@ -17,8 +17,9 @@ public class Intern {
         String result = map.get(s);
         if (result == null) {
             result = map.putIfAbsent(s, s);
-            if (result == null)
+            if (result == null) {
                 result = s;
+            }
         }
         return result;
     }
